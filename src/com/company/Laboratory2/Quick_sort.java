@@ -6,6 +6,7 @@ public class Quick_sort {
     public static void Merge_sort () {
     }
 
+<<<<<<< HEAD
     public static void main (String args[]) throws Exception{
         Scanner sc = new Scanner(new FileReader(".\\src\\com\\company\\Laboratory2\\sum.txt"));
         PrintStream out = new PrintStream(new File("C:\\Users\\Dell\\IdeaProjects\\Algorithms and Data Structures\\src\\com\\company\\Laboratory2\\sum2.txt"));
@@ -19,6 +20,15 @@ public class Quick_sort {
         Merge_sort(arr, -1, arr.length-1);
         for (int i = 0; i < arr.length; i++){
             out.print(arr[i]+" ");
+=======
+
+    public static void main (String args[]) {
+
+        int[] arr = new int[] {10, 4, 8, 7, 6, 1, 9, 3, 2, 5};
+        Merge_sort(arr, -1, arr.length-1);
+        for (int i = 0; i < arr.length; i++){
+            System.out.print(arr[i]+" ");
+>>>>>>> 2679c319f903ba1870aa6491556fbf097a462bcf
         }
     }
     public static void Merge_sort (int[] arr, int last_lower_number_index, int pivot_element_index) {
