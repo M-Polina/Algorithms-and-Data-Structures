@@ -1,19 +1,19 @@
 
 import random
-def QuickSort(nums, left_index, wright_index):
-    if left_index >= wright_index:
+def QuickSort(nums, left_index, right_index):
+    if left_index >= right_index:
         return 0
-    pivot_element_index = random.randint(left_index, wright_index)
+    pivot_element_index = random.randint(left_index, right_index)
     pivot_element = nums[pivot_element_index]
-    nums[pivot_element_index], nums[wright_index] = nums[wright_index], nums[pivot_element_index]
+    nums[pivot_element_index], nums[right_index] = nums[right_index], nums[pivot_element_index]
     last_smaller_element_index = left_index - 1
-    for compared_element_index in range(left_index, wright_index):
+    for compared_element_index in range(left_index, right_index):
         if nums[compared_element_index] <= pivot_element:
             last_smaller_element_index += 1
             nums[compared_element_index], nums[last_smaller_element_index] = nums[last_smaller_element_index], nums[compared_element_index]
-    nums[last_smaller_element_index + 1], nums[wright_index] = nums[wright_index], nums[1 + last_smaller_element_index]
+    nums[last_smaller_element_index + 1], nums[right_index] = nums[right_index], nums[1 + last_smaller_element_index]
     QuickSort(nums, left_index, last_smaller_element_index)
-    QuickSort(nums, last_smaller_element_index + 2, wright_index)
+    QuickSort(nums, last_smaller_element_index + 2, right_index)
 
 f = open("sort.in")
 fout = open("sort.out", "w")
